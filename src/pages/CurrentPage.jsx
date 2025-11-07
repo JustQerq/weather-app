@@ -2,9 +2,10 @@ import React, { useEffect, useState, useRef } from 'react'
 import axios from 'axios'
 import WeatherCard from '../components/WeatherCard'
 import LocationForm from '../components/LocationForm'
-import api_keys from '../../api_keys.json'
 
 const CurrentPage = ({backend_url}) => {
+    const open_router_key = ""
+
     const hasMounted = useRef(false);
 
     const [weatherData, setWeatherData] = useState([])
@@ -68,7 +69,7 @@ const CurrentPage = ({backend_url}) => {
                     
                     const url = "https://openrouter.ai/api/v1/responses"
                     const post_headers = {
-                        'Authorization': `Bearer ${api_keys["open-router"]}`,
+                        'Authorization': `Bearer ${open_router_key}`,
                         'Content-Type': 'application/json'
                     }
                     const post_body = {
@@ -124,7 +125,7 @@ const CurrentPage = ({backend_url}) => {
                                 
                                 const url = "https://openrouter.ai/api/v1/responses"
                                 const post_headers = {
-                                    'Authorization': `Bearer ${api_keys["open-router"]}`,
+                                    'Authorization': `Bearer ${open_router_key}`,
                                     'Content-Type': 'application/json'
                                 }
                                 const post_body = {
@@ -183,7 +184,7 @@ const CurrentPage = ({backend_url}) => {
                     onUpdate={handleUpdate}
                 />
             </div>
-            <p className='bg-indigo-100 rounded-sm max-w-4xl p-4'>
+            <p className='bg-indigo-100 rounded-sm max-w-6xl max-h-1/2 p-4'>
                 {llmLoading ? (
                 "Loading interesting places..."
                 ) : llmError ? (
