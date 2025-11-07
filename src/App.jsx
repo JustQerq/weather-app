@@ -10,7 +10,7 @@ import AboutPage from './pages/AboutPage'
 
 /* <Route path='/Forecast' element={<ForecastPage />} /> */
 
-const backend_url = "http://127.0.0.1:5000"
+const backend_url = "http://localhost:8080"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
