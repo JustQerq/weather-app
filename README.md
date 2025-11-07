@@ -16,5 +16,9 @@ Weather app frontend by Oleg Samarets, part of a test assignment for Project Man
 - Clone this repository
 - Run `npm install` in the project's folder
 - Run the backend application: https://github.com/JustQerq/Weather_app_backend/tree/main
+- (optional) Get a FREE open-router API key to enable LLM messages: https://openrouter.ai
+- (optional) Paste your open-router key into the CurrentPage.jsx file under the "open_router_key" variable
 - Use `npm run dev` in the project's folder
 - Open `http://localhost:3000/` in browser
+
+Note: open-router API key deactivates if pushed into a public repository
